@@ -27,7 +27,7 @@ for pt_version, setup_command in reversed(TORCH_RELEASE_GPU.items()):
 
     env_name_pt = f"fuzzer_pt_{pt_version}"
     shell_command = [
-        "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/benchmarking/setup_and_run_pt.sh",
+        "benchmarking/setup_and_run_pt.sh",
         env_name_pt,
         pt_version,
         "torch",

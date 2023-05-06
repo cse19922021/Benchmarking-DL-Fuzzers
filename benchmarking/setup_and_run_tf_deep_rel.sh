@@ -36,7 +36,7 @@ library=$3
 
 conda create --name $env_name python=${pyversion[$tf_version]} -y
 
-source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
+source /home/dir/anaconda3/etc/profile.d/conda.sh
 conda activate "$env_name"
 
 conda install -c conda-forge cudatoolkit=${dict[$tf_version]} -y  

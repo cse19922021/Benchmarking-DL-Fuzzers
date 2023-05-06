@@ -25,7 +25,7 @@ for pt_version, setup_command in TORCH_RELEASE_GPU.items():
 
     env_name_pt = f"fuzzer_docter_pt_{pt_version}"
     shell_command = [
-        "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/benchmarking/setup_and_run_torch_docter.sh",
+        "benchmarking/setup_and_run_torch_docter.sh",
         env_name_pt,
         pt_version,
         "pytorch",

@@ -11,19 +11,22 @@ from csv import writer
 from mine_comments import parse_comment
 import csv
 
-# (0, nimashiri2012@gmail.com, 1, cse19922021@gmail.com, 2, nshiri@yorku.ca, 3, nshiri@cse.yorku.ca)
+'''
+You need to put four github access token in the following dictionaries
+'''
+
 tokens = {
-    0: "",
-    1: "",
-    2: "",
-    3: "",
+    0: "YOUR GIT TOKEN",
+    1: "YOUR GIT TOKEN",
+    2: "YOUR GIT TOKEN",
+    3: "YOUR GIT TOKEN",
 }
 
 tokens_status = {
-    "": True,
-    "": True,
-    "": True,
-    "": True,
+    "YOUR GIT TOKEN": True,
+    "YOUR GIT TOKEN": True,
+    "YOUR GIT TOKEN": True,
+    "YOUR GIT TOKEN": True,
 }
 
 
@@ -95,7 +98,8 @@ def get_commits(
         link_ = first_100_commits
     else:
         response = requests_retry_session().get(
-            last_com, headers={"Authorization": "token {}".format(current_token)}
+            last_com, headers={
+                "Authorization": "token {}".format(current_token)}
         )
         link_ = last_com
 
@@ -146,14 +150,16 @@ def get_commits(
                 if re.findall(r"(tf\.)", commit["title"]) or re.findall(
                     r"(tf\.)", commit["body"]
                 ):
-                    comment_flag = parse_comment(commit["comments_url"], current_token)
+                    comment_flag = parse_comment(
+                        commit["comments_url"], current_token)
 
                     if re.findall(memory_related_rules_strict, commit["title"]):
                         title_match = True
                     if re.findall(memory_related_rules_strict, commit["body"]):
                         body_match = True
 
-                    tf_version = re.findall(r"(tf\s\d{1,2}[.]\d{1,2})", commit["body"])
+                    tf_version = re.findall(
+                        r"(tf\s\d{1,2}[.]\d{1,2})", commit["body"])
 
                     _date = commit["created_at"]
                     sdate = _date.split("-")
@@ -258,35 +264,40 @@ def main():
         )
 
         response = requests_retry_session().get(
-            branchLink, headers={"Authorization": "token {}".format(current_token)}
+            branchLink, headers={
+                "Authorization": "token {}".format(current_token)}
         )
 
         if response.status_code != 200:
             tokens_status[current_token] = False
             current_token = select_access_token(current_token)
             response = requests_retry_session().get(
-                branchLink, headers={"Authorization": "token {}".format(current_token)}
+                branchLink, headers={
+                    "Authorization": "token {}".format(current_token)}
             )
 
         if response.status_code != 200:
             tokens_status[current_token] = False
             current_token = select_access_token(current_token)
             response = requests_retry_session().get(
-                branchLink, headers={"Authorization": "token {}".format(current_token)}
+                branchLink, headers={
+                    "Authorization": "token {}".format(current_token)}
             )
 
         if response.status_code != 200:
             tokens_status[current_token] = False
             current_token = select_access_token(current_token)
             response = requests_retry_session().get(
-                branchLink, headers={"Authorization": "token {}".format(current_token)}
+                branchLink, headers={
+                    "Authorization": "token {}".format(current_token)}
             )
 
         if response.status_code != 200:
             tokens_status[current_token] = False
             current_token = select_access_token(current_token)
             response = requests_retry_session().get(
-                branchLink, headers={"Authorization": "token {}".format(current_token)}
+                branchLink, headers={
+                    "Authorization": "token {}".format(current_token)}
             )
 
         branches = json.loads(response.text)

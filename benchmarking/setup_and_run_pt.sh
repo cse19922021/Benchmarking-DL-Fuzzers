@@ -27,7 +27,7 @@ setup_command=$4
 
 conda create --name $env_name python=${pyversion[$pt_version]} -y
 
-source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
+source /home/dir/anaconda3/etc/profile.d/conda.sh
 conda activate "$env_name"
 
 $setup_command
@@ -36,7 +36,7 @@ pip install pandas
 pip install pymongo
 pip install tensorflow
 
-#python /media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/FreeFuzz/src/FreeFuzz.py --conf=/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/FreeFuzz/src/config/expr.conf --release=$pt_version --library=$library
+#python fuzzers/FreeFuzz/src/FreeFuzz.py --conf=fuzzers/FreeFuzz/src/config/expr.conf --release=$pt_version --library=$library
 
 ROOT_DIR="/media/nimashiri/SSD/testing_results/FreeFuzz/torch/$pt_version"
 
@@ -46,7 +46,7 @@ for dir in $(find "$ROOT_DIR" -type d); do
     fi
 done
 
-source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
+source /home/dir/anaconda3/etc/profile.d/conda.sh
 conda deactivate
 
 conda env remove --name $env_name -y

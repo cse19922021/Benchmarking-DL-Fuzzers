@@ -4,6 +4,8 @@
 *.jpg
 *.zip
 *.png
+*.bson
+*.json
 *.dylib
 # Test binary, built with `go test -c`
 *.test
@@ -11,7 +13,7 @@
 *.out
 *.txt
 # Dependency directories (remove the comment below to include it)
-vendor/
 ml_repos_cloned/
-fuzzers/
+# fuzzers/
 tf-output/
+.vscode/

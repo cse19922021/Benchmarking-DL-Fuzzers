@@ -28,7 +28,7 @@ for tf_version, _ in reversed(TF_RELEASE_CUDA_MAP.items()):
     env_name_tf = f"fuzzer_tf_{tf_version}"
     subprocess.call(
         [
-            "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/benchmarking/setup_and_run_tf.sh",
+            "benchmarking/setup_and_run_tf.sh",
             env_name_tf,
             tf_version,
             "tf",

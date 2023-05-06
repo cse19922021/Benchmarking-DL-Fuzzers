@@ -1,4 +1,7 @@
-import sys, os, re, subprocess
+import sys
+import os
+import re
+import subprocess
 
 
 def getListOfFiles(dirName):
@@ -28,7 +31,7 @@ if __name__ == "__main__":
     for j, f in enumerate(lof):
         if re.findall(r"((\/bug\/))", f) or re.findall(r"(\/neq\/)", f):
             shell_command = [
-                "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/benchmarking/exec.sh",
+                "benchmarking/exec.sh",
                 env_name_pt,
                 pt_version,
                 "torch",
