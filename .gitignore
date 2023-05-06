@@ -4,8 +4,6 @@
 *.jpg
 *.zip
 *.png
-*.bson
-*.json
 *.dylib
 # Test binary, built with `go test -c`
 *.test
@@ -17,3 +15,6 @@ ml_repos_cloned/
 # fuzzers/
 tf-output/
 .vscode/
+fuzzers/DeepREL/dump
+fuzzers/DeepREL/pytorch/torch-candidate
+fuzzers/FreeFuzz/dump
