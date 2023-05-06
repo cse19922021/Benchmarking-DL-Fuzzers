@@ -36,7 +36,7 @@ library=$3
 
 conda create --name $env_name python=${pyversion[$tf_version]} -y
 
-source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
+source /home/anaconda3/etc/profile.d/conda.sh
 conda activate "$env_name"
 
 conda install -c conda-forge cudatoolkit=${dict[$tf_version]} -y  
@@ -54,11 +54,11 @@ pip install ruamel-yaml
 pip install scikit-learn
 pip install networkx
 
-cd /home/nimashiri/code/docter/
+cd /home/code/docter/
 bash run_fuzzer.sh $library ./all_constr/tf2 ./configs/vi.config $tf_version | tee /home/workdir/ci.log
 
 
-source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
+source /home/anaconda3/etc/profile.d/conda.sh
 conda deactivate
 
 conda env remove --name $env_name -y

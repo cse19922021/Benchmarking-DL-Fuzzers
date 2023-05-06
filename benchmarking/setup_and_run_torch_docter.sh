@@ -27,7 +27,7 @@ setup_command=$4
 
 conda create --name $env_name python=${pyversion[$pt_version]}   -y
 
-source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
+source /home/anaconda3/etc/profile.d/conda.sh
 conda activate "$env_name"
 
 $setup_command
@@ -38,10 +38,10 @@ pip install ruamel-yaml
 pip install scikit-learn
 pip install networkx
 
-cd /home/nimashiri/code/docter/
+cd /home/code/docter/
 bash run_fuzzer.sh $library ./all_constr/pt ./configs/ci.config $pt_version | tee /home/workdir/ci.log
 
-source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
+source /home/anaconda3/etc/profile.d/conda.sh
 conda deactivate
 
 conda env remove --name $env_name -y

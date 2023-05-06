@@ -12,14 +12,14 @@ TORCH_RELEASE_GPU = {
     "1.8.2": "conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch-lts -c nvidia -y",
     "1.8.1": "conda install pytorch==1.8.1 torchvision==0.9.1 torchaudio==0.8.1 cudatoolkit=11.3 -c pytorch -c conda-forge -y",
     "1.8.0": "conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge -y",
-    # "1.7.1": "pip install torch==1.7.1",
-    # "1.7.0": "pip install torch==1.7.0",
-    # "1.6.0": "pip install torch==1.6.0",
-    # "1.5.1": "pip install torch==1.5.1",
-    # "1.5.0": "pip install torch==1.5.0",
-    # "1.4.0": "pip install torch==1.4.0",
-    # "1.1.0": "pip install torch==1.1.1",
-    # "1.0.0": "pip install torch==1.1.0",
+    "1.7.1": "pip install torch==1.7.1",
+    "1.7.0": "pip install torch==1.7.0",
+    "1.6.0": "pip install torch==1.6.0",
+    "1.5.1": "pip install torch==1.5.1",
+    "1.5.0": "pip install torch==1.5.0",
+    "1.4.0": "pip install torch==1.4.0",
+    "1.1.0": "pip install torch==1.1.1",
+    "1.0.0": "pip install torch==1.1.0",
 }
 
 

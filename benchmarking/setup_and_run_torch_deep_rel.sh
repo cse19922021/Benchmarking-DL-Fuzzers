@@ -27,7 +27,7 @@ setup_command=$4
 
 conda create --name $env_name python=${pyversion[$pt_version]} -y
 
-source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
+source /home/anaconda3/etc/profile.d/conda.sh
 conda activate "$env_name"
 
 $setup_command
@@ -38,22 +38,22 @@ pip install textdistance
 pip install munkres
 pip install tensorflow
 
-# python /media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/DeepREL/pytorch/src/DeepREL.py $pt_version $library
+# python /media/DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/DeepREL/pytorch/src/DeepREL.py $pt_version $library
 
-ROOT_DIR="/media/nimashiri/SSD/testing_results/DeepRel/torch/$pt_version"
+ROOT_DIR="outdir/$pt_version"
 
 for dir in $(find "$ROOT_DIR" -type d); do
     if echo "$dir" | grep -Eq "neq" || echo "$dir" | grep -Eq "bug"; then
         find "$dir" -type f | while read file
         do
-            find "$file" -name "*.py" -exec sh -c 'echo "Processing file: $1"; python "$1"' sh {} \; |& tee -a "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/logs/DeepRel/torch/$pt_version.txt";
+            find "$file" -name "*.py" -exec sh -c 'echo "Processing file: $1"; python "$1"' sh {} \; |& tee -a "/media/DATA/vsprojects/benchmarkingDLFuzzers/logs/DeepRel/torch/$pt_version.txt";
         done
     fi
 done
 
-# python /media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/benchmarking/run_deep_rel_tests.py $pt_version $library $ROOT_DIR $env_name
+# python /media/DATA/vsprojects/benchmarkingDLFuzzers/benchmarking/run_deep_rel_tests.py $pt_version $library $ROOT_DIR $env_name
 
-source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
+source /home/anaconda3/etc/profile.d/conda.sh
 conda deactivate
 
 conda env remove --name $env_name -y

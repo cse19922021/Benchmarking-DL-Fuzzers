@@ -38,11 +38,11 @@ pip install tensorflow
 
 #python fuzzers/FreeFuzz/src/FreeFuzz.py --conf=fuzzers/FreeFuzz/src/config/expr.conf --release=$pt_version --library=$library
 
-ROOT_DIR="/media/nimashiri/SSD/testing_results/FreeFuzz/torch/$pt_version"
+ROOT_DIR="/media/SSD/testing_results/FreeFuzz/torch/$pt_version"
 
 for dir in $(find "$ROOT_DIR" -type d); do
     if echo "$dir" | grep -Eq "potential-bug" || echo "$dir" | grep -Eq "FreeFuzz_bugs"; then
-        find "$dir" -name "*.py" -exec sh -c 'echo "Processing file: $1"; python "$1"' sh {} \; |& tee -a "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/logs/pytorch/$pt_version.txt";
+        find "$dir" -name "*.py" -exec sh -c 'echo "Processing file: $1"; python "$1"' sh {} \; |& tee -a "/media/DATA/vsprojects/benchmarkingDLFuzzers/logs/pytorch/$pt_version.txt";
     fi
 done
 
