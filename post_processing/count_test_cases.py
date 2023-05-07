@@ -1,4 +1,5 @@
-import os, re
+import os
+import re
 
 
 def read_txt(fname):
@@ -27,7 +28,7 @@ def getListOfFiles(dirName):
 def match_involved_API(_path):
     flag = False
     actual_API = read_txt(
-        "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/data/involved_APIs.txt"
+        "/data/involved_APIs.txt"
     )
     for _api in actual_API:
         if re.findall(_api, _path):
@@ -35,7 +36,7 @@ def match_involved_API(_path):
     return flag
 
 
-for root, dir, files in os.walk("/media/nimashiri/SSD/testing_results/FreeFuzz/torch"):
+for root, dir, files in os.walk("/testing_results/FreeFuzz/torch"):
     tool = "FreeFuzz"
     for release in dir:
         current_release = os.path.join(root, release)

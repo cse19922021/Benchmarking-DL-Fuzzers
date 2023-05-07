@@ -67,7 +67,7 @@ The distinction is based the first parameter of each the documents in each colle
 
 
 def get_unique_documents(dbname, new_db_name):
-    QUERIED_APIS_ADDRESS = f"/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/logs/{dbname}_queried_apis.txt"
+    QUERIED_APIS_ADDRESS = f"logs/{dbname}_queried_apis.txt"
     new_db = pymongo.MongoClient(host="localhost", port=27017)[new_db_name]
     mydb = myclient[dbname]
 
@@ -118,7 +118,7 @@ Count the number of APIs based on the source they have been collected.
 
 
 def count_sources_per_api(dbname):
-    QUERIED_APIS_ADDRESS = f"/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/logs/{dbname}_queried_apis.txt"
+    QUERIED_APIS_ADDRESS = f"logs/{dbname}_queried_apis.txt"
     mydb = myclient[dbname]
     counter = 0
 
@@ -142,7 +142,7 @@ def count_sources_per_api(dbname):
                 if v != 0:
                     mydata = [name, k]
                     with open(
-                        f"/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/logs/{dbname}_api_coverage.csv",
+                        f"logs/{dbname}_api_coverage.csv",
                         "a",
                         newline="\n",
                     ) as fd:
@@ -176,7 +176,7 @@ def get_all_databases():
 
 
 def get_overlap_docter(tool_name, libname):
-    files = os.listdir(f"/home/nimashiri/code/docter/all_constr/{libname}")
+    files = os.listdir(f"/home/code/docter/all_constr/{libname}")
     i = 0
     for api in files:
         api_split = api.split(".")
@@ -188,7 +188,7 @@ def get_overlap_docter(tool_name, libname):
 
 
 def remove_overlap_docter(tool_name, libname):
-    files = os.listdir(f"/home/nimashiri/Desktop/nima_constr/{libname}")
+    files = os.listdir(f"/home/Desktop/nima_constr/{libname}")
     i = 0
     for api in files:
         api_split = api.split(".")
@@ -196,7 +196,7 @@ def remove_overlap_docter(tool_name, libname):
         flag = search_in_dataset(tool_name, new_api, libname)
         if not flag:
             os.remove(
-                os.path.join(f"/home/nimashiri/Desktop/nima_constr/{libname}", api)
+                os.path.join(f"/home/Desktop/nima_constr/{libname}", api)
             )
             i = i + 1
             print(f"Found non overlapping api{new_api}:{i}")
@@ -206,11 +206,11 @@ def search_in_dataset(tool_name, api_name, lib):
     flag = False
     if lib == "pt":
         data = pd.read_csv(
-            "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/data/torch_data.csv"
+            "data/torch_data.csv"
         )
     else:
         data = pd.read_csv(
-            "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/data/tf_data.csv"
+            "data/tf_data.csv"
         )
     for idx, row in data.iterrows():
         if api_name == row["Buggy API"]:
@@ -232,7 +232,7 @@ def search_in_dataset(tool_name, api_name, lib):
             #         row["Release"],
             #     ]
             # with open(
-            #     "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/data/overlap_data_all.csv",
+            #     "data/overlap_data_all.csv",
             #     mode="a",
             #     newline="\n",
             # ) as fd:
@@ -247,11 +247,11 @@ def get_overlap_freefuzz(tool_name, dbname, lib):
 
     if lib == "pt":
         data = pd.read_csv(
-            "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/data/torch_data.csv"
+            "data/torch_data.csv"
         )
     else:
         data = pd.read_csv(
-            "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/data/tf_data.csv"
+            "data/tf_data.csv"
         )
 
     for idx, row in data.iterrows():
@@ -274,7 +274,7 @@ def get_overlap_freefuzz(tool_name, dbname, lib):
                     row["Release"],
                 ]
             with open(
-                "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/data/overlap_tf.csv",
+                "data/overlap_tf.csv",
                 mode="a",
                 newline="\n",
             ) as fd:

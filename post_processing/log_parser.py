@@ -1,5 +1,7 @@
 import pandas as pd
-import csv, os, re
+import csv
+import os
+import re
 
 cwd = os.getcwd()
 
@@ -48,9 +50,9 @@ def decompose_detections(splitted_lines):
 
 def main():
     for root, dir, files in os.walk(
-        "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/logs/"
+        "logs/"
     ):
-        root = "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/logs"
+        root = "logs"
         for tool in ["DeepRel"]:
             current_tool = os.path.join(root, tool)
             for lib in ["torch"]:
@@ -90,13 +92,13 @@ def main():
 
                     for item in mydata:
                         if not os.path.exists(
-                            f"/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/results/{tool}/{lib}/"
+                            f"results/{tool}/{lib}/"
                         ):
                             os.makedirs(
-                                f"/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/results/{tool}/{lib}/"
+                                f"results/{tool}/{lib}/"
                             )
                         with open(
-                            f"/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/results/{tool}/{lib}/DetectionMat_{release}.csv",
+                            f"results/{tool}/{lib}/DetectionMat_{release}.csv",
                             "a",
                             newline="\n",
                         ) as fd:
