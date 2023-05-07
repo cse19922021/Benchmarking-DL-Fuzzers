@@ -17,8 +17,9 @@ requests
 pandas
 numpy
 pymongo
+anaconda
 ```
-[FreeFuzz](https://github.com/ise-uiuc/FreeFuzz), [DeepRel](https://github.com/ise-uiuc/DeepREL), and [DocTer](https://github.com/lin-tan/DocTer) also need their own dependencies, please visit their home page to install the dependencies. 
+[FreeFuzz](https://github.com/ise-uiuc/FreeFuzz), [DeepRel](https://github.com/ise-uiuc/DeepREL), and [DocTer](https://github.com/lin-tan/DocTer) also need their own dependencies, please visit their home page to install the dependencies.
 
 # Bug collection
 First, you need to mine issues from Github repository of PyTorch and TensorFlow libraries. If you want to use our data, please jump to the next section. 
@@ -46,3 +47,8 @@ You can access the step by step data in the following [link](https://docs.google
 
 # Running the fuzzers
 
+For example, if you want to run DeepRel on TensorFlow releases, just execute the following command:
+```
+python exec_tf_deeprel.py
+```
+Do not directly run the bash scripts, you need to run the Python scripts. 
