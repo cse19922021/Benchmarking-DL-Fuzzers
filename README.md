@@ -4,6 +4,22 @@ This is the source repository of the paper titled "Benchmarking Deep Learning (D
 # About
 The aim of this study is to assess the effectiveness of three advanced Deep Learning (DL) fuzzers, namely FreeFuzz, DeepRel, and DocTer, on two commonly used open-source DL libraries: PyTorch and TensorFlow. The evaluation involves running the fuzzers on various versions of the DL libraries, starting from the earliest releases up to the latest ones. The study analyzes the outcomes and identifies the reasons behind any undetected bugs, proposing enhancements to the fuzzers.
 
+# Warning
+
+It is highly recommended that to use UNIX-based operating systems to test and run Orion, preferebly ubuntu-22.04.
+
+FreeFuzz, DeepRel, and DocTer are test case generation tools that may harm SUT. They may generate test cases that freez or halt your operating system. Take extreme cautios when running them.
+
+# Requirements
+You need the following dependencies to be able to run the fuzzers:
+```
+requests
+pandas
+numpy
+pymongo
+```
+[FreeFuzz](https://github.com/ise-uiuc/FreeFuzz), [DeepRel](https://github.com/ise-uiuc/DeepREL), and [DocTer](https://github.com/lin-tan/DocTer) also need their own dependencies, please visit their home page to install the dependencies. 
+
 # Bug collection
 First, you need to mine issues from Github repository of PyTorch and TensorFlow libraries. If you want to use our data, please jump to the next section. 
 To collect issues, you need four github access tokens. To collect PyTorch issues, run the following script:
@@ -29,3 +45,4 @@ You can access the step by step data in the following [link](https://docs.google
 
 
 # Running the fuzzers
+
