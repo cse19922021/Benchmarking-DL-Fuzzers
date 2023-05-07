@@ -44,7 +44,6 @@ We performed manual analysis on the collected issues in two major rounds. We res
 
 You can access the step by step data in the following [link](https://docs.google.com/spreadsheets/d/1cT6vbF36_x9YXmk1XK1LKSNJEdscLXd36wTMmMe-3zU/edit?usp=sharing).
 
-
 # Running the fuzzers
 
 For example, if you want to run DeepRel on TensorFlow releases, just execute the following command:
