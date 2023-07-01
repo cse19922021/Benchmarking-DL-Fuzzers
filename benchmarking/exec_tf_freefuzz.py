@@ -22,18 +22,30 @@ TF_RELEASE_CUDNN_MAP = {
     "2.3.0": "7.6",
 }
 
-# Loop over TensorFlow releases
-for tf_version, _ in reversed(TF_RELEASE_CUDA_MAP.items()):
+# # Loop over TensorFlow releases
+# for tf_version, _ in reversed(TF_RELEASE_CUDA_MAP.items()):
 
-    env_name_tf = f"fuzzer_tf_{tf_version}"
+#     env_name_tf = f"fuzzer_tf_{tf_version}"
+#     subprocess.call(
+#         [
+#             "benchmarking/setup_and_run_tf.sh",
+#             env_name_tf,
+#             tf_version,
+#             "tf",
+#         ],
+#         shell=False,
+#     )
+
+#     print("")
+
+tf_version = "v2.6.0"
+
+if __name__ == '__main__':
     subprocess.call(
         [
-            "benchmarking/setup_and_run_tf.sh",
-            env_name_tf,
+            "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/benchmarking/setup_and_run_tf.sh",
             tf_version,
             "tf",
         ],
         shell=False,
     )
-
-    print("")
