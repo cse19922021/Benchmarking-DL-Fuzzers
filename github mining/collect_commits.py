@@ -61,7 +61,7 @@ def main():
                     temp.append(commit_link)
 
     except Exception as e:
-        print(e)
+        print(e.message)
 
     with open("./commits/" + r_prime[4] + ".txt", "a") as f:
         for item in temp:
