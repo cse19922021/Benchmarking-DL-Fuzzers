@@ -46,7 +46,7 @@ if __name__ == '__main__':
     if __name__ == '__main__':
         subprocess.call(
             [
-                "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/benchmarking/setup_and_run_pt.sh",
+                "/media//DATA/vsprojects/benchmarkingDLFuzzers/benchmarking/setup_and_run_pt.sh",
                 torch_version,
                 "torch",
             ],

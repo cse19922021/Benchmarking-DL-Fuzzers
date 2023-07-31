@@ -36,7 +36,7 @@ library=$2
 
 # conda create --name $env_name python=${pyversion[$tf_version]} -y
 
-# source /home/nimashiri/anaconda3/etc/profile.d/conda.sh
+# source /home//anaconda3/etc/profile.d/conda.sh
 # conda activate "$env_name"
 
 # conda install -c conda-forge cudatoolkit=${dict[$tf_version]} -y  
@@ -51,7 +51,7 @@ library=$2
 # pip install pandas
 # pip install pymongo
 
-python /media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/FreeFuzz/src/FreeFuzz.py --conf=/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/FreeFuzz/src/config/expr.conf --release=$tf_version --library=$library
+python /media//DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/FreeFuzz/src/FreeFuzz.py --conf=/media//DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/FreeFuzz/src/config/expr.conf --release=$tf_version --library=$library
 
 # ROOT_DIR="/media/SSD/testing_results/FreeFuzz/tf/$tf_version"
 

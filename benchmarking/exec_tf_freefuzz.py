@@ -43,7 +43,7 @@ tf_version = "v2.6.0"
 if __name__ == '__main__':
     subprocess.call(
         [
-            "/media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/benchmarking/setup_and_run_tf.sh",
+            "/media//DATA/vsprojects/benchmarkingDLFuzzers/benchmarking/setup_and_run_tf.sh",
             tf_version,
             "tf",
         ],

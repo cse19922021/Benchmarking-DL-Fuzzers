@@ -36,7 +36,7 @@ library=$2
 # pip install pymongo
 # pip install tensorflow
 
-python /media/nimashiri/DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/FreeFuzz/src/FreeFuzz.py --conf=fuzzers/FreeFuzz/src/config/expr.conf --release=$pt_version --library=$library
+python /media//DATA/vsprojects/benchmarkingDLFuzzers/fuzzers/FreeFuzz/src/FreeFuzz.py --conf=fuzzers/FreeFuzz/src/config/expr.conf --release=$pt_version --library=$library
 
 # ROOT_DIR="/media/SSD/testing_results/FreeFuzz/torch/$pt_version"
 
