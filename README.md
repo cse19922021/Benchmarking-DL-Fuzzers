@@ -14,5 +14,18 @@ Our workflow data is available at [here](https://docs.google.com/spreadsheets/d/
 
 ## Running the fuzzers
 
-In order to run the fuzzers, please download them from [here](https://github.com/cse19922021/Benchmarking-DL-Fuzzers/blob/main/fuzzers-download-link) and extract the zip filers under **fuzzers**
+### Running DocTer
+
+To run DocTer, you need to download the modified version which is available [here](https://drive.google.com/file/d/1TbQn2HEyIbKVVT8H_GDZPkV_0PNu5N7-/view?usp=sharing)
+
+Then, you need to replace the directory named **all_constr** with the following directory which is available [here](https://drive.google.com/file/d/1ZnF2KwIojsBffrnw_Lxb5AIgCvKBBQ4h/view?usp=sharing)
+
+### Step 1
+
+In order to run the fuzzers, please first download them from [here](https://github.com/cse19922021/Benchmarking-DL-Fuzzers/blob/main/fuzzers-download-link) and extract the zip filers under **fuzzers**
 directory.
+
+### Step 2
+
+Once you downloaded the fuzzers, you need to cd to the **benchmarking** directory and run the corresponding shell script files.
+
