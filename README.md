@@ -9,4 +9,4 @@ In this work, we set out to conduct the first ground-truth empirical evaluation 
 
 Our systematic analysis further identifies four major, broad, and common factors that affect these fuzzers' ability to detect real bugs. These findings present opportunities to improve the performance of the fuzzers in future work. As a proof of concept, we propose a lightweight corner case generator as an extension to the three DL fuzzers, which simply covers several boundary values as well as DL-specific data types. It helps FreeFuzz, DeepRel, and DocTer detect 12, 12, and 14 more bugs, respectively, that were overlooked by the original fuzzers. Overall, this work complements prior studies on DL fuzzers with an extensive performance evaluation and provides a benchmark for future DL library fuzzing studies. Also, our proposed corner case generator proves that the fuzzers can be extended to detect more bugs by extending their internal fuzzing logic based on the insights provided in root cause analysis.
 
-
+Our workflow data is available at [here](https://docs.google.com/spreadsheets/d/1cT6vbF36_x9YXmk1XK1LKSNJEdscLXd36wTMmMe-3zU/edit?usp=sharing).
