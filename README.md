@@ -46,3 +46,23 @@ directory.
 
 Once you downloaded the fuzzers, you need to cd to the **benchmarking** directory and run the corresponding shell script files.
 
+Once you copy and extract the zip files:
+
+To run FreeFuzz on TensorFlow releases:
+```
+python benchmarking/exec_tf_freefuzz.py
+```
+To run FreeFuzz on PyTorch releases:
+```
+python benchmarking/exec_torch_freefuzz.py
+```
+To run DeepRel on PyTorch releases:
+```
+python benchmarking/exec_tf_deeprel.py
+```
+To run DeepRel on TensorFlow releases:
+```
+python benchmarking/exec_torch_deeprel.py
+```
+
+
