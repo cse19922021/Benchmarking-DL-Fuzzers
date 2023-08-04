@@ -11,15 +11,47 @@ Our systematic analysis further identifies four major, broad, and common factors
 
 ## Directory structure
 
-Benchmarking Deep Learning Fuzzers
-│   README.md
-│
-│   fuzzers-download-link
-│
-└───benchmarking
-│   │
-│   └───exec.sh
-│   │
+- benchmarking DL fuzzers/
+    - benchmarking/
+        - exec.sh
+        - exec_tf_deeprel.py
+        - exec_tf_docter.py
+        - exec_tf_freefuzz.py
+        - exec_torch_deeprel.py
+        - exec_torch_docter.py
+        - exec_torch_freefuzz.py
+        - run_deep_rel_tests.py
+        - setup_and_run_pt.sh
+        - setup_and_run_tf.sh
+        - setup_and_run_tf_deep_rel.sh
+        - setup_and_run_tf_docter.sh
+        - setup_and_run_torch_deep_rel.sh
+        - setup_and_run_torch_docter.sh
+    - data/
+        - overlap_tf.csv
+        - overlap_torch.csv
+        - tf_data.csv
+        - torch_data.csv
+    - database_analysis/
+        - db_analysis.py
+    - fuzzers/
+    - github mining/
+        - issues
+          - pytorch.csv
+          - tensorflow.csv 
+        - collect_commits.py
+        - collect_issues_tf.py
+        - collect_issues_torch.py
+        - mine_comments.py
+    - post_processing
+      - concat.py
+      - count_test_cases.py
+      - log_parser.py 
+    - utils
+      - releases.py   
+    - README.md
+    - gitignore
+    - fuzzers-download-link
 
 ## TensorFlow and PyTorch issues
 The mined issues for [TensorFlow](https://github.com/cse19922021/Benchmarking-DL-Fuzzers/blob/main/github%20mining/issues/tensorflow.csv) and [PyTorch](https://github.com/cse19922021/Benchmarking-DL-Fuzzers/blob/main/github%20mining/issues/pytorch.csv) are available under ```github mining/issues/```.
