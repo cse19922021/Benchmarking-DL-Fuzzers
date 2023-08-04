@@ -9,6 +9,18 @@ In this work, we set out to conduct the first ground-truth empirical evaluation 
 
 Our systematic analysis further identifies four major, broad, and common factors that affect these fuzzers' ability to detect real bugs. These findings present opportunities to improve the performance of the fuzzers in future work. As a proof of concept, we propose a lightweight corner case generator as an extension to the three DL fuzzers, which simply covers several boundary values as well as DL-specific data types. It helps FreeFuzz, DeepRel, and DocTer detect 12, 12, and 14 more bugs, respectively, that were overlooked by the original fuzzers. Overall, this work complements prior studies on DL fuzzers with an extensive performance evaluation and provides a benchmark for future DL library fuzzing studies. Also, our proposed corner case generator proves that the fuzzers can be extended to detect more bugs by extending their internal fuzzing logic based on the insights provided in root cause analysis.
 
+## Directory structure
+
+Benchmarking Deep Learning Fuzzers
+│   README.md
+│
+│   fuzzers-download-link
+│
+└───benchmarking
+│   │
+│   └───exec.sh
+│   │
+
 ## TensorFlow and PyTorch issues
 The mined issues for [TensorFlow](https://github.com/cse19922021/Benchmarking-DL-Fuzzers/blob/main/github%20mining/issues/tensorflow.csv) and [PyTorch](https://github.com/cse19922021/Benchmarking-DL-Fuzzers/blob/main/github%20mining/issues/pytorch.csv) are available under ```github mining/issues/```.
 
