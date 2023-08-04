@@ -13,6 +13,7 @@ Our systematic analysis further identifies four major, broad, and common factors
 The mined issues for [TensorFlow](https://github.com/cse19922021/Benchmarking-DL-Fuzzers/blob/main/github%20mining/issues/tensorflow.csv) and [PyTorch](https://github.com/cse19922021/Benchmarking-DL-Fuzzers/blob/main/github%20mining/issues/pytorch.csv) are available under ```github mining/issues/```.
 
 ## Workflow data
+Based on issues, we conducted the manual analysis as explained in ***Section 2.4***.
 Our workflow data is available at [here](https://docs.google.com/spreadsheets/d/1cT6vbF36_x9YXmk1XK1LKSNJEdscLXd36wTMmMe-3zU/edit?usp=sharing).
 
 ## Running the fuzzers
