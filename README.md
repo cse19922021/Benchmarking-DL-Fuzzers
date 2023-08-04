@@ -24,6 +24,17 @@ To run DocTer, you need to download the modified version which is available [her
 
 Then, you need to replace the directory named **all_constr** with the following directory which is available [here](https://drive.google.com/file/d/1ZnF2KwIojsBffrnw_Lxb5AIgCvKBBQ4h/view?usp=sharing)
 
+Once you replaced the constraints, you can run the following scripts:
+
+To run DocTer on TensorFlow releases:
+```
+python benchmarking/exec_tf_docter.py
+```
+To run DocTer on PyTorch releases:
+```
+python benchmarking/exec_torch_docter.py
+```
+
 ### Running FreeFuzz and DeepRel
 
 #### Step 1
